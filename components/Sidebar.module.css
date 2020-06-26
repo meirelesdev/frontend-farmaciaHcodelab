@@ -1,0 +1,96 @@
+.sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    font-weight: normal;
+
+    width: 300px;
+    height: 100vh;
+    z-index: 100;
+    background-color: var(--bg-default);
+    border-right: 2px solid var(--bor-default);
+    transition: left 0.4s;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.sidebar ul {
+    margin-top: 70px;
+}
+
+.sidebar li {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    list-style: none;
+    border-bottom: 1px solid var(--bor-default);
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: var(--txt-default);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar li a:hover {
+    color: var(--bor-default);
+}
+
+.btnLogin {
+	box-shadow:inset 0px 1px 0px 0px var(--sha-default);
+	background:linear-gradient(to bottom, var(--bgl-default) 5%, var(--bgl-default2) 100%);
+	background-color: var(--bgl-default);
+    border-radius:3px;
+    margin-top: 10px;
+	border:1px solid var(--bor-default2);
+	display:inline-block;
+	cursor:pointer;
+	color:var(--bg-default);
+	font-family:Verdana;
+    font-size:15px;
+    font-weight: normal;
+    padding:5px 20px;
+    width: 70%;
+	text-decoration:none;
+	text-shadow:0px 5px 5px var(--txt-shadow);
+}
+.btnLogin:hover {
+	background:linear-gradient(to bottom, var(--bgl-default2) 5%, var(--bgl-default) 100%);
+    background-color: var(--bgl-default2);
+    
+}
+.sidebar  li  a.btnLogin:hover{
+    color: var(--bg-default);
+}
+.btnLogin:active {
+	position:relative;
+	top:1px;
+}
+.closeMenu {
+    position: absolute;
+    top: 20px;
+    right:  8%;
+	background-color:transparent;
+	display:inline-block;
+	color:var(--bg-default);
+	font-family:Arial;
+	font-size:0px;
+	padding:6px 6px;
+    text-decoration:none;
+    border-width: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+}
+@media (min-width: 824px){
+    .sidebar{
+        display: none;
+    }
+}

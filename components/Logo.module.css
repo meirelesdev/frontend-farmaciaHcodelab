@@ -1,0 +1,30 @@
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+}
+.logo p{
+    font-weight: 30px;
+    font-weight: bold;
+    color: var(--bgl-default);
+}
+.logo a {
+    display: inherit;
+    text-decoration: none;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+@media (min-width: 824px){
+    .logo{
+        margin-left: 10px;
+    }
+    .logo a{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

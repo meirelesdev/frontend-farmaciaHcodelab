@@ -1,0 +1,46 @@
+.mainFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bor-default);
+    padding-top: 20px;
+    
+}
+
+.mainFooter .rodape{
+    display: flex;
+    flex-direction: column;
+    line-height: 5px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+}
+.rodape p {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.infoSite{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.infoSite  p{
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+@media (min-width: 776px){
+    .divsFooter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .divsFooter > div{
+        flex: 1;
+    }
+    .socialLogo{
+        display: flex;
+        justify-content: center;
+    }
+}

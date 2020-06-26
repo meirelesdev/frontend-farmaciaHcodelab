@@ -1,0 +1,20 @@
+.socialMidia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialMidia a{
+    margin: 10px;
+    padding: 3px;
+    border-radius: 2px;
+}
+.socialMidia a{
+    transition: background-color 0.2s  ease-in;
+}
+.socialMidia a:hover{
+    background-color:#ccc;
+    
+}
+.socialMidia img{
+    max-width: 30px;
+}

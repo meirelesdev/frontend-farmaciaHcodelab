@@ -1,0 +1,107 @@
+.slider{
+    
+    width: 100%;
+    height: 80vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.slider .slide h1{
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    color: #3d3d3d;
+    left: 10%;
+    font-size: 1.5em;
+}
+.slide span{
+    background-color: #1e62d0;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    margin: 10px;
+}
+.slide a {
+    position: absolute;
+    top: 20%;
+    background-color: #1e62d0;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 10px;
+    color: white;
+    left: 10%;
+}
+.slide{
+    min-width: 100%;
+    display: flex;
+    height: 100%;
+    transition: 0.5s all;
+}
+.direita, .esquerda{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20%;
+    background: none;
+    height: 100%;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.direita img, .esquerda img{
+    max-width: 60px;
+    border-radius: 100%;
+    transition: 0.3s all;
+    
+}
+.direita img{
+    transform: scaleX(-1);
+}
+.direita:hover, .esquerda:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+}
+.direita:hover img, .esquerda:hover img{
+    background-color: gray;
+}
+.direita{
+    left: 0;
+}
+.esquerda{
+    right: 0;
+}
+@media (min-width: 750px){
+    .direita, .esquerda{
+        width: 10%;
+    }
+    .slider .slide h1{
+        
+        top: 10%;
+        text-align: center;
+        left: 20%;
+        font-size: 2.5em;
+    }
+    .slide span{
+        background-color: #1e62d0;
+        border-radius: 10px;
+        padding: 5px;
+        color: white;
+        margin: 10px;
+    }
+    .slide a {
+        top: 30%;
+        font-size: 2em;
+        left: 30%;
+    }
+}

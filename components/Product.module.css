@@ -1,0 +1,93 @@
+.product{
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 0 10px 0px #00000042;
+}
+.product img{
+    width: 100%;
+    max-width: 250px;
+    max-height: 210px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.product img:hover{
+    transform: scale(1.2);
+}
+.product h3{
+    color: #75B977;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.product .oldPrice{
+    text-decoration: line-through;
+    color: #a1a1a1;
+}
+.product p{
+    font-weight: bold;
+    color: green;
+}
+.product .priceParcel{
+    color: #f57b42;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.btnProducts{
+    display: flex;
+}
+.btnProducts a{
+    background:none;
+    margin: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    
+}
+.btnProducts a img{
+    border: none;
+    padding: 5px;
+    max-width: 30px;
+}
+.btnProducts a img:hover{
+    /* transform: scale(1); */
+}
+.productSingle{
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 0 10px 0px #00000042;
+}
+.productSingle img{
+    width: 100%;
+    max-width: 250px;
+    max-height: 210px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.productSingle img:hover{
+    transform: scale(1.2);
+}

@@ -1,0 +1,21 @@
+:root{
+
+    --bg-default: #fff;
+    --bor-default: #ccc;
+    --txt-default: #3d3d3d;
+    --sha-default:#97c4fe;
+    --bgl-default: #3d94f6;
+    --bgl-default2: #1e62d0;
+    --bor-default2: #337fed;
+    --txt-shadow: #1570cd;
+    --box-shadow: #00000042;
+    
+}
+*{
+    outline: none;
+    font-family: Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body, footer, header{
+    margin: 0;
+    padding: 0;
+}

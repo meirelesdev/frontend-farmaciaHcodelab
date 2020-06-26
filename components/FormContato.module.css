@@ -1,0 +1,79 @@
+.formRodape{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    padding: 10px;
+    
+}
+.mainLogin{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.mainLogin section{
+    width: 100%;
+    border-bottom: 2px solid var(--bor-default);
+    padding-bottom: 50px;
+}
+.mainLogin section h1{
+    color: var(--txt-default);
+}
+.inputgroup{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.inputgroup input, .inputgroup textarea{
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    border: 2px solid var(--bgl-default2);
+}
+.inputgroup label{
+    margin: 10px;
+}
+.inputgroup input:focus, .inputgroup textarea:focus{
+    border: 2px solid #ccc;
+}
+.formRodape button {
+    width: 200px;
+    height: 50px;
+    outline: none;
+    border: 2px solid var(--bor-default);
+    background-color: var(--bgl-default2);
+    color: white;    
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+}
+.login button, .register button {
+    width: 200px;
+    height: 50px;
+    outline: none;
+    border: 2px solid var(--bor-default2);
+    background-color: var(--bgl-default2);
+    color: white;    
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 5px;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 776px){
+    .mainLogin {
+        flex-wrap: nowrap;
+    }
+    .mainLogin section{
+        padding: 0 20px;
+        margin-top: -10px;
+    }
+    .mainLogin .register{
+        border-left: 2px solid var(--bor-default);
+    }
+}

@@ -1,0 +1,30 @@
+.card {
+    justify-content: center;
+    width: 90%;
+    flex-wrap: wrap;
+    background-color: white;
+    color: black;
+}
+
+.card-content {
+    padding: 10px 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.actions {
+    justify-content: flex-end;
+    background-color: var(--grayF);
+    width: 100%;
+    padding: 10px;
+}
+
+/* .actions button {
+    border: none;
+    background: var(--white);
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    padding: 16px;
+} */

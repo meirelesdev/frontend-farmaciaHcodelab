@@ -1,0 +1,10 @@
+.banner{
+    margin: 0 auto;
+}
+.products{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
