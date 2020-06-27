@@ -133,7 +133,7 @@
     border-top: none;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 372px) { */
     #header .logo {
         width: 60px;
     }
@@ -199,4 +199,4 @@
         margin-top: 60px;
         
     }
-}
+/* } */

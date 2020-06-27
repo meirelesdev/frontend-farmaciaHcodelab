@@ -10,8 +10,11 @@
     padding: 10px 20px;
     justify-content: center;
     display: flex;
+    flex-direction: column;
 }
-
+.card-content div:last-of-type {
+    display: flex;    
+}
 .actions {
     justify-content: flex-end;
     background-color: var(--grayF);

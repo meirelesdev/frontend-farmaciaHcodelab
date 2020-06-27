@@ -21,15 +21,21 @@ console.log(Produtos[0])
         <Layout>
 
             <HeaderTitle text="Produtos" />
-
+            <Button action="adicionar" text="Cadastrar Produto"></Button>
             <section className={styles.products}>
-
+                
                 {Produtos.map((produto, i )=> (
 
-                    <Card actions={<Button>Editar</Button>} key={i}> {/* Poderemos fazer essa refatoração depois */}
+                <Card key={i}> {/* Poderemos fazer essa refatoração depois */}
 
                         <Product produto={produto} foto={produto.id} />
-                    </Card>
+                    <div>
+                        <Button action="editar" text="Editar"></Button>
+                        <Button action="excluir" text="Excluir"></Button>    
+                    </div>
+                        
+        
+                </Card>
 
                 ))}
 

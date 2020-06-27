@@ -10,13 +10,6 @@ export default function Card(props) {
                 {props.children}
 
             </div>
-
-            {props.actions && <div className={styles.actions}>
-
-                {props.actions}
-
-            </div>}
-
         </div>
     )
 

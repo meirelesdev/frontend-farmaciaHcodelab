@@ -4,12 +4,12 @@
     align-items: center;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) { */
     #footer {
         position: fixed;
         bottom: 0;
         background: none;
-        color:  var(--grayC);
+        color:  white;
         z-index: 2;
         font-size: 12px;
         transform: rotate(-90deg);
@@ -24,4 +24,4 @@
         left: 0;
         bottom: 0;      
     }
-}
+/* } */
