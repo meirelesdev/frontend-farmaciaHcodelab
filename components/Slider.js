@@ -36,9 +36,9 @@ export default function Slider(){
     const autoXIncremente = ()=>{
         setInterval(()=>{
             goRight()
-        },5000)
+        },10000)
     }
-    // autoXIncremente()
+    autoXIncremente()
     const goLeft = () => {
         x === 0 ? setX(-100*(sliderArr.length - 1)): setX(x + 100)
     }

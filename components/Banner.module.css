@@ -1,6 +1,7 @@
 .contactBanner{
     height: 200px;
-    background-image: url("/assets/img/bannerContact.jpg");
+    background: rgba(0,0,0,0.5) url("/assets/img/bannerContact.jpg");
+    background-blend-mode: overlay;
     background-position: -50px;
     background-attachment: fixed;
     background-size:cover;
@@ -14,11 +15,13 @@
     padding: 5px;
     border-radius: 5px;
     text-shadow: 0px 2px 5px black;
+    letter-spacing: 3px;
     box-shadow: 0 0 9px 0px var(--box-shadow);
 }
 .historiaBanner{
     height: 200px;
-    background-image: url("/assets/img/bannerHistoria.jpg");
+    background: rgba(0,0,0,0.5) url("/assets/img/bannerHistoria.jpg");
+    background-blend-mode: overlay;
     background-position: -50px;
     background-attachment: fixed;
     background-size:cover;
@@ -31,12 +34,14 @@
     color: var(--bgl-default);
     padding: 5px;
     border-radius: 5px;
+    letter-spacing: 3px;
     text-shadow: 0px 2px 5px black;
     box-shadow: 0 0 10px 0px var(--box-shadow);
 }
 .loginRegisterBanner{
     height: 200px;
-    background-image: url("/assets/img/loginregistro.jpg");
+    background:  rgba(0, 0, 0, 0.5) url("/assets/img/loginregistro.jpg");
+    background-blend-mode: overlay ;
     background-position: -50px;
     background-attachment: fixed;
     background-size:cover;
@@ -50,5 +55,6 @@
     padding: 5px;
     border-radius: 5px;
     text-shadow: 0px 2px 5px black;
+    letter-spacing: 3px;
     box-shadow: 0 0 10px 0px var(--box-shadow);
 }
