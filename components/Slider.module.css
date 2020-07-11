@@ -15,6 +15,7 @@
     top: 5%;
     text-align: center;
     color: #3d3d3d;
+    text-shadow: 3px 2px 1px  white;
     left: 10%;
     font-size: 1.5em;
 }
@@ -27,12 +28,12 @@
 }
 .slide a {
     position: absolute;
-    top: 20%;
+    top: 50%;
     background-color: #1e62d0;
-    padding: 10px;
-    font-weight: bold;
+    padding: 10px 20px;
+    font-weight: lighter;
     text-decoration: none;
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
     border-radius: 10px;
     color: white;
     left: 10%;

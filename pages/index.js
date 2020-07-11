@@ -6,7 +6,6 @@ import styles from '../components/Home.module.css'
 import Product from '../components/Product'
 import axios from 'axios'
 import serverUrl from '../utils/env'
-import Link from 'next/link'
 
 export default function Index(props) {
 
@@ -80,7 +79,11 @@ Index.getInitialProps = async () => {
 
     let res = await axios.get(`${serverUrl}/products`)
 
-
-    return { "products": res.data }
+    let produtos  = res.data.filter((produto, index)=>{
+        if(index < 4){
+            return produto
+        }
+    })    
+    return { "products": produtos }
 
 }

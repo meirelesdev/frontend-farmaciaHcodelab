@@ -11,9 +11,11 @@
     --box-shadow: #00000042;
     
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
 *{
     outline: none;
-    font-family: Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
 }
 a{
     text-decoration: none;
