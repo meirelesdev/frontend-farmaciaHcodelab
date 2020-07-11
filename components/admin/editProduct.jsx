@@ -41,7 +41,7 @@ export default function editProduct({ produto }) {
     return (
         <form className={styles.formAdd} onSubmit={handleSubmit}>
             <div className={styles.inputGroup}>
-                <img srcSet={`${serverUrl}/products/image/${produto.id}`} />
+                <img srcSet={`${serverUrl}/products/image/${produto.id}`} alt={produto.name} />
             </div>
             <input type="file" name="file" />
             <div className={styles.inputGroup}>
