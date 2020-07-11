@@ -24,9 +24,9 @@
 .product img:hover{
     transform: scale(1.2);
 }
-.product h3{
-    color: #75B977;
-    font-weight: normal;
+.product p.title{
+    color: black;
+    font-weight: bold;
     text-align: center;
     font-size: 1em;
     text-transform: uppercase;

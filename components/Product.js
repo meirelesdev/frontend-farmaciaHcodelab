@@ -15,7 +15,7 @@ export default function Product(props) {
             </Link>
             <Link href={`/products/${produto.id}`}>
                 <a>
-                    <h3>{produto.name}</h3>
+                    <p className={styles.title}>{produto.name}</p>
                 </a>
             </Link>
             <small className={styles.oldPrice}>{produto.oldprice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</small>

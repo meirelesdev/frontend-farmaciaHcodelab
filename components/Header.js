@@ -23,7 +23,7 @@ export default function Header(props){
         <header className={styles.mainHeader}>
             <Logo />
             <button onClick={toogleSidebar} className={styles.openMenu}>
-                     <img srcSet="/assets/icons/open.svg" className={styles.icon} />
+                     <img srcSet="/assets/icons/open.svg" className={styles.icon} alt="Abrir Menu"/>
             </button>
                 <Sidebar show={sidebarShow} toogleSidebar={toogleSidebar}/>
             <div className={styles.search}>

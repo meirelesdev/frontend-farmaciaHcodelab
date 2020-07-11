@@ -5,7 +5,7 @@ export default function Logo(){
         <div className={styles.logo}>
             <Link href="/">
                 <a>
-                    <img srcSet="/assets/icons/logo.svg" />
+                    <img srcSet="/assets/icons/logo.svg" alt="Logo Farmacia hcode"/>
                     <p>Farmacia Hcode</p>
                 </a>
             </Link>

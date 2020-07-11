@@ -5,7 +5,9 @@ export default function sideBar (props) {
     return (
         <nav className={styles.sidebar + ' ' + (props.show ? styles.show : '')}>
             <ul>
-                <button onClick={props.toogleSidebar} className={styles.closeMenu}><img srcSet="/assets/icons/close.svg" className={styles.icon} /></button>
+                <li>
+                <button onClick={props.toogleSidebar} className={styles.closeMenu}><img srcSet="/assets/icons/close.svg" className={styles.icon} alt="Fechar Menu" /></button>
+                </li>
                 <li><Link href="/" ><a>Home</a></Link></li>
                 <li>
                     <Link href="/products" >

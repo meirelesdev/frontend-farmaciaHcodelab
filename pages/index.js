@@ -30,17 +30,17 @@ export default function Index(props) {
                 <main>
                     <div>
                         <h2>Serviços</h2>
-                        <img srcSet="/assets/img/injeservicos.jpg" />
+                        <img srcSet="/assets/img/injeservicos.jpg" alt="Servicos"/>
                         <p>Aplicação de injetaveis</p>
                     </div>
                     <div>
                         <h2>Manipulação</h2>
-                        <img srcSet="/assets/img/manipulacao.jpg" />
+                        <img srcSet="/assets/img/manipulacao.jpg" alt="Manipulação"/>
                         <p>Farmacia de Manipulação</p>
                     </div>
                     <div>
                         <h2>Sua Saude</h2>
-                        <img srcSet="/assets/img/pressao.jpg" />
+                        <img srcSet="/assets/img/pressao.jpg" alt="Confira sua pressão" />
                         <p>Aferição de Pressão</p>
                     </div>
                 </main>
@@ -49,20 +49,21 @@ export default function Index(props) {
                 <main>
                     <div>
                         <h2>Remedios Gratis</h2>
-                        <img srcSet="/assets/img/popular.jpg" />
+                        <img srcSet="/assets/img/popular.jpg"alt="Farmacia Polular" />
                         <p>Através do governo federal.</p>
                     </div>
                     <div>
                         <h2>Farmacia Popular</h2>
                         <a href="/assets/downloads/pdffarmaciapopular.pdf" target="_blank">
-                            <img srcSet="/assets/img/logomarcabrasil.jpg" />
+                            <img srcSet="/assets/img/logomarcabrasil.jpg" alt="Medicamento gratis" />
                         </a>
-
                         <p>Clicando na Imagem você tera acesso a lista de Medicamentos disponibilizados <strong>Gratuitamente</strong>!</p>
+
+                        
                     </div>
                     <div>
                         <h2>Convenios</h2>
-                        <img srcSet="/assets/img/parcerias.jpg" />
+                        <img srcSet="/assets/img/parcerias.jpg" alt="convenios" />
                         <p>Temos parceria com diversos convenios!</p>
                     </div>
                 </main>
