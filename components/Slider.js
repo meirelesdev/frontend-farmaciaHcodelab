@@ -33,12 +33,7 @@ export default function Slider(){
 
     const [x, setX] = useState(0)
 
-    const autoXIncremente = ()=>{
-        setInterval(()=>{
-            goRight()
-        },10000)
-    }
-    autoXIncremente()
+    
     const goLeft = () => {
         x === 0 ? setX(-100*(sliderArr.length - 1)): setX(x + 100)
     }
@@ -47,6 +42,12 @@ export default function Slider(){
        x === -100*( sliderArr.length -1)? setX(0): setX(x - 100)
         
     }
+    const autoXIncremente = ()=>{
+        setInterval(()=>{
+            goRight()
+        },10000)
+    }
+    autoXIncremente()
     return(
         <div className={styles.slider}>
             {
