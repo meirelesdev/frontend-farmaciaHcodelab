@@ -1,14 +1,10 @@
 import Layout from '../../components/admin/Layout'
 import HeaderTitle from '../../components/admin/HeaderTitle'
 import React from 'react'
-import axios from 'axios'
-import { Cookies } from 'react-cookie'
 import handleAuthSSR from '../../utils/auth'
-import serverUrl from '../../utils/env'
+
 
 export default function Index() {
-
-    const cookies = new Cookies()
 
     return (
         <Layout>
@@ -22,7 +18,7 @@ export default function Index() {
 
 Index.getInitialProps = async (ctx) => {
     
-    // await handleAuthSSR(ctx)
+    const res = await handleAuthSSR(ctx)
 
-    return {}
+    return {"res" : res }
 }

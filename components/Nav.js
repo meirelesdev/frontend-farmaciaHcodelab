@@ -13,7 +13,7 @@ export default function Nav(){
                 </li>
                 <li>
                     <Link href="/products" >
-                        <a>Products</a>
+                        <a>Produtos</a>
                     </Link>
                 </li>
                 

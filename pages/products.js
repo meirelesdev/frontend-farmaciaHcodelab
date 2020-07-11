@@ -4,22 +4,34 @@ import Footer from '../components/Footer'
 import styles from '../components/PageProducts.module.css'
 import Link from 'next/link'
 import FormContato from '../components/FormContato'
+import axios from 'axios'
+import serverUrl from '../utils/env'
 
+export default function Products(props){
 
-export default props =>{
-    const produto = {id:1, name:'Nome o produtos 1', price: 10.99, oldprice: 15.99}
+    const produtos = props.products
+    
     return (
         <>
         <Header />
         <main className={styles.mainProducts}>
-            <Product foto={3} produto={produto} />          
-            <Product foto={5} produto={produto} />          
-            <Product foto={2} produto={produto} />          
-            <Product foto={7} produto={produto} />
+        { produtos.length >= 0 ? 
+                            produtos.map((product, index) => (                            
+                                <Product key={index} produto={product} />
+                            )) : <div>Sem Produtos Cadastrados</div>
+                }
+        
+            
         </main>
         <Footer>
             <FormContato/>
         </Footer>
         </>
     )
+}
+Products.getInitialProps = async ()=>{
+
+    const res = await axios.get(`${serverUrl}/products`)
+
+    return { "products" : res.data }
 }

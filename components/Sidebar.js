@@ -9,7 +9,7 @@ export default function sideBar (props) {
                 <li><Link href="/" ><a>Home</a></Link></li>
                 <li>
                     <Link href="/products" >
-                        <a>Products</a>
+                        <a>Produtos</a>
                     </Link>
                 </li>
                 

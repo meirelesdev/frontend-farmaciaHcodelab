@@ -2,3 +2,100 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+.mainProductSingle small{
+    color: #aaa;
+    margin-left: 10px;
+}
+.mainProduct{
+    text-align: center;
+}
+.mainProduct h1{
+    color: #626366;
+}
+.productContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.productContent img{
+    min-width: 100px;
+    overflow: hidden;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0px #00000042;
+    transition: 0.3s ease-in-out;
+}
+.productContent img:hover{
+    transform: scale(1.2);
+}
+.productContent p{
+    text-indent: 30px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    padding: 2%;
+    color: #393939;
+}
+.prices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    padding-bottom: 10px;
+    font-size: 1.5em;
+}
+.prices small{
+    text-decoration: line-through;
+    color: red;
+}
+.prices strong{
+    font-style: italic;
+}
+.promo{
+    background-color: sandybrown;
+    box-shadow: 0 0 10px 0px #00000042;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    max-height: 200px;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+.promo h3{
+    color: orangered;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+.promo p {
+    color: black;
+}
+.btnEuquero button{
+
+}
+.btnEuquero button{
+    border: none;
+    width: 300px;
+    background: var(--bgl-default2);
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid var(--txt-default);
+    border-radius: 4px; 
+    padding: 16px 30px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.btnEuquero button:hover{
+    background-color: white;
+    color: var(--bgl-default);
+    border: 2px solid var(--bgl-default2);
+}
+.btnEuquero button:active{
+    background: var(--bgl-default);
+}

@@ -5,5 +5,5 @@ export default function ImgComp(props){
         width:100+"%",
         height:100+"%"
     }
-    return <img style={imgStyles} srcSet={props.src} alt="imagem do slide" />
+return <img style={imgStyles} srcSet={props.src} alt={props.alt} />
 }

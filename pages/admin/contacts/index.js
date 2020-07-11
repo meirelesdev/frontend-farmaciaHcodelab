@@ -6,7 +6,10 @@ import styles from '../../../components/admin/Contacts.module.css'
 import CardMessage from '../../../components/admin/CardMessage'
 import Input from '../../../components/admin/Input'
 import { useState } from 'react'
+import handleAuthSSR from '../../../utils/auth'
+import { Cookies } from 'react-cookie'
 
+const cookie = new Cookies()
 export default function Index(props) {
     //função para evitar erro se o banco não estiver rodando ou não houver mensagens
     if(props.contacts == undefined) {
@@ -43,17 +46,13 @@ export default function Index(props) {
         <HeaderTitle text="Contatos " />
             
             <div className={styles.contatosContent}>
-                    <ul className={styles.headerContatos}>
-                        <li>Lista</li>
-                        <li>Mensagem</li>
-                    </ul>
-                </div>  
+                    <p>Lista de Mensagems</p>
+            </div>  
             <main className={styles.main} >
             {/* função ternária para evitar erro de rodar um .map() em um array vazio e mostrar
             uma mensagem de erro mais amigável */}
             {contacts != "" ?
             <>
-            
                 <section className={styles.messageList}>
                     <ul className={styles.ulList}>
                         {contacts.map((contact, i) => (
@@ -62,7 +61,7 @@ export default function Index(props) {
                                     <button  id={contact.id} onClick={ () => handleClickMessage(i) } value="teste"> 
                                             <span className={styles.nameList}>{contact.name}</span> 
                                             <span className={styles.dateList}>
-                                                {/* {new Date(contact.created_at).toISOString().split('T')[0]} */}
+                                                {new Date(contact.created_at).toISOString().split('T')[0]}
                                                         "Sem data no momentoso"
                                                         </span>
                                     </button>
@@ -75,11 +74,11 @@ export default function Index(props) {
                 <section className={styles.messages}>
                 
                     {contacts.map((contact, i) => 
-                    <>
+                    <div key={i}>
                         { visible[i] && 
-                                <CardMessage key={i} id={contact.id} name={contact.name} email={contact.email} phone={contact.phone} message={contact.message} checked={answered[i] ? "checked": ""} onChange={() => handleClickAnswered(i,contact.id)} received={contact.created_at} updated={contact.updated_at}/>
+                                <CardMessage id={contact.id} name={contact.name} email={contact.email} phone={contact.phone} message={contact.message} checked={answered[i] ? "checked": ""} onChange={() => handleClickAnswered(i,contact.id)} received={contact.created_at} updated={contact.updated_at}/>
                             }
-                    </>
+                    </div>
                     ) }
 
                 </section> 
@@ -91,31 +90,25 @@ export default function Index(props) {
     )
 }
 Index.getInitialProps = async (ctx) => {
+    
+    await handleAuthSSR(ctx)
+
+    const token = cookie.get('token')
+    
+    const config = {
+        header: {Authorization: `Bearer ${token}`}
+    }
+    
     let res = {data:""}
-    try{ res = await axios.get(`${serverUrl}/admin/contacts`)
+    try{ 
+        res = await axios.get(`${serverUrl}/admin/contacts`)
     }catch(err){ 
-        res.data =[
-            {
-                name:"Daniel meireles",
-                email:"daniel@gmail.com.br",
-                message: "Ola, esta é uma mensagem de teste"
-            },
-            {
-                name:"Daniel meireles",
-                email:"daniel@gmail.com.br",
-                message: "Ola, esta é uma mensagem de teste"
-            },
-            {
-                name:"Daniel meireles",
-                email:"daniel@gmail.com.br",
-                message: "Ola, esta é uma mensagem de teste"
-            }
-        ]
-         
+                 console.log("Erro no catch ao listar contatos",err.message)
     }
 
     return {
-        "contacts": res.data
+        "contacts": res.data,
+        "config": config
     }
 }
     

@@ -2,44 +2,68 @@ import HeaderTitle from '../../../components/admin/HeaderTitle'
 import styles from '../../../components/admin/Home.module.css'
 import Card from '../../../components/admin/Card'
 import Button from '../../../components/admin/Button'
-import Product from '../../../components/Product'
 import Layout from '../../../components/admin/Layout'
+import handleAuthSSR from '../../../utils/auth'
+import axios from 'axios'
+import serverUrl from '../../../utils/env'
 
-export default function Index() {
+export default function Index({ products }) {
+    // console.log("Aqui esta o config: ", config)
+    const produtos = products
 
-    const Produtos = [
-        {id:1, name:'Nome o produtos 1', price: 10.99, oldprice: 15.99},
-        {id:2, name:'Nome o produtos 2', price: 10.99, oldprice: 15.99},
-        {id:3, name:'Nome o produtos 3', price: 10.99, oldprice: 15.99},
-        {id:4, name:'Nome o produtos 4', price: 10.99, oldprice: 15.99},
-        {id:5, name:'Nome o produtos 5', price: 10.99, oldprice: 15.99},
-        {id:6, name:'Nome o produtos 6', price: 10.99, oldprice: 15.99},
-];
-console.log(Produtos[0])
 
     return (
         <Layout>
 
             <HeaderTitle text="Produtos" />
             <Button action="adicionar" text="Cadastrar Produto"></Button>
+            {produtos.length > 0 ? 
             <section className={styles.products}>
-                
-                {Produtos.map((produto, i )=> (
 
-                <Card key={i}> {/* Poderemos fazer essa refatoração depois */}
+                {produtos.map((produto, i) => (
 
-                        <Product produto={produto} foto={produto.id} />
-                    <div>
-                        <Button action="editar" text="Editar"></Button>
-                        <Button action="excluir" text="Excluir"></Button>    
-                    </div>
-                        
-        
-                </Card>
+                    <Card key={i}>
+                        <div className={styles.produtoAdmin}>
+                            <img srcSet={`${serverUrl}/products/image/${produto.id}`} alt={produto.name} />
+                            <div className={styles.dataProducts}>
+                                <h2>{produto.name}</h2>
+                                <p className={styles.title}>Descrição</p>
+                                <p>{produto.description.substring(0, 100) + "..."}</p>
+                                <p className={styles.title}>Categoria</p>
+                                <p>{produto.category}</p>
+                <p>de <small>{produto.oldprice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</small></p>
+                <p>por<strong>{produto.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</strong></p>
+                                <div className={styles.btnProdutos}>
+                                <Button action="editar" id={produto.id} text="Editar"></Button>
+                                <Button action="excluir" name={produto.name} id={produto.id} text="Excluir"></Button>
+                            </div>
+                            </div>
+                            
+                        </div>
+
+
+
+                    </Card>
 
                 ))}
-
-            </section>
+            </section> : <div>Cadastre um produto para velo aqui!</div>
+            }
         </Layout>
     )
+}
+Index.getInitialProps = async (ctx) => {
+
+    let products = []
+
+    await handleAuthSSR(ctx)
+
+    await axios.get(`${serverUrl}/products`).then(res => {
+
+        products = res.data
+    }).catch(err => {
+        console.log(err.message)
+        products = []
+    })
+
+    return { "products": products }
 }

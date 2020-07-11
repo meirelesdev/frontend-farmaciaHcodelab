@@ -79,6 +79,7 @@
 .user-info a, .links a {
     color: var(--bor-default);
     text-decoration: none;
+    cursor: pointer;
     text-transform: uppercase;
 }
 

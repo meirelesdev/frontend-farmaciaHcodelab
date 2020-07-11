@@ -5,12 +5,31 @@ import { useState } from 'react'
 
 export default function Slider(){
 
-    let sliderArr = [<ImgComp src="/assets/banner/1.jpg"/>,
-                <ImgComp src="assets/banner/2.jpg" />,
-                <ImgComp src="/assets/banner/3.jpg"/>,
-                <ImgComp src="/assets/banner/4.jpg"/>,
-                <ImgComp src="/assets/banner/5.jpg"/>
-            ]
+    let sliderArr = [{
+        img: <ImgComp src="/assets/banner/farmacia.jpg" alt="farmacia Popular"/>,
+        title: "Medicamentos Gratis",
+        link:"/contact",
+        textLink:"Venha Conferir"
+    },
+    {
+        img: <ImgComp src="/assets/banner/2.jpg" alt="convenios" />,
+        title: "Convenios com descontos IMPERDIVEIS",
+        link:"/products",
+        textLink: "Até 50% Off"
+    },
+    {
+        img: <ImgComp src="/assets/banner/familia.jpg" alt="Familia com saude" />,
+        title: "Para a saude da sua Familia",
+        link:"/contact",
+        textLink: "Aproveite"
+    },
+    {
+        img: <ImgComp src="/assets/banner/covid19.jpg" alt="codiv-19"/>,
+        title: "Todos Contra o covid",
+        link:"/contact",
+        textLink:"Se proteja"
+    }
+    ]
 
     const [x, setX] = useState(0)
 
@@ -34,10 +53,10 @@ export default function Slider(){
                 sliderArr.map((item, index)=>{
                     return(
                         <div key={index} className={styles.slide} style={{transform: `translateX(${x}%)`}}>
-                            {item}
-                            <h1>Produtos com <span>Qualidade</span> Absoluta!</h1>
-                               <Link href="/contact">
-                                    <a>Venha Conferir</a>
+                            {item.img}
+                            <h1>{item.title}!</h1>
+                               <Link href={item.link}>
+                                    <a>{item.textLink}</a>
                                 </Link>
                         </div>
                         

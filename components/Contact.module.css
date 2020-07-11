@@ -1,23 +1,57 @@
 
-.contactBanner{
-    height: 200px;
-    background-image: url("/assets/img/bannerContact.jpg");
-    background-position: -50px;
-    background-attachment: fixed;
-    background-size:cover;
-    position: relative;
-}
+
 .mainContact {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
-.contactBanner h1{
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    color: var(--bor-default2);
-    padding: 5px;
-    border-radius: 5px;
-    text-shadow: 0px 2px 5px black;
+.mainContact form{
+    flex: 1;
+}
+
+.contactLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    align-items: center;
+    
+    box-shadow: 0 0 10px 0 var(--box-shadow);
+}
+.contactLinks h2{
+    margin: 10px;
+}
+.address{
+    margin:  0 auto;
+}
+.contactLinks address{
+    margin:  20px;
+}
+.address a{
+    text-decoration: none;
+    color: var(--txt-default);
+    display: flex;
+    margin: 20px;
+}
+.address img{
+    width: 50px;
+    margin: 2px;
+    border-radius: 100%;
     box-shadow: 0 0 9px 0px var(--box-shadow);
+}
+@media (min-width: 600px) {
+    .contactLinks{
+        margin-right: 20px;
+    }
+}
+@media (min-width: 996px){
+    .contactLinks{
+        order: 1;
+        margin-left: 20px;
+    }
+    .mainContact form{
+        order: 2;
+    }
 }

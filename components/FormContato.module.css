@@ -50,8 +50,15 @@
     font-size: 18px;
     border-radius: 5px;
     margin: 5px;
+    cursor: pointer;
     letter-spacing: 1px;
 }
+.formRodape button:focus, .register button:focus, .login button:focus{
+    background-color: white;
+    color: var(--bor-default2);
+    border: 2px solid var(--bor-default2);
+}
+
 .login button, .register button {
     width: 200px;
     height: 50px;
@@ -60,6 +67,7 @@
     background-color: var(--bgl-default2);
     color: white;    
     font-size: 18px;
+    cursor: pointer;
     border-radius: 5px;
     margin: 5px;
     letter-spacing: 1px;

@@ -7,4 +7,40 @@
     padding: 2%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+.mainSection{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+.mainSection main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.mainSection main div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    margin: 10px;
+    max-width: 300px;
+    min-width: 250px;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px 0px #00000042;
+}
+.mainSection main div img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 0px #00000042;
+}
+.mainSection main div p {
+    margin: 5px;
+    padding: 2%;
+    
+    text-align: center;
 }

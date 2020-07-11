@@ -40,7 +40,45 @@
 .product-photo {
     height: 120px;
 }
-
+.produtoAdmin{
+    display: flex;
+    background-color: #ccc;
+    padding: 2%;
+    margin-left: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.produtoAdmin img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    box-shadow: 0 0 10px 0px #00000042;
+    border-radius: 10px;
+}
+.produtoAdmin h2{
+    font-size: .8em;
+}
+.dataProducts{
+    display: flex;
+    flex-direction: column;
+    
+}
+.dataProducts p{
+    font-size: .8em;
+    margin: 2px;
+    text-align: justify;
+    border-bottom: 1px solid #ccc;
+}
+.title{
+    font-weight: bold;
+}
+.btnProdutos{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media (min-width: 576px) {
     #home {
         flex-direction: column;

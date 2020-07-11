@@ -2,10 +2,25 @@ import styles from './Header.module.css'
 import IconFarmacia from './IconFarmacia'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { Cookies } from 'react-cookie'
+import { useRouter } from 'next/router'
+
+
 
 export default function Header({ onMenuToggle }) {
-
+    const Router = useRouter()
+    const cookies = new Cookies()
+    
     const [menuOpened, setMenuOpened] = useState(false)
+    function logout(e) {
+        e.preventDefault()
+        
+        cookies.remove('user')
+        cookies.remove('token')
+        cookies.remove('email')
+        
+        Router.push('/login')
+    }
 
     const toggleMenu = () => {
 
@@ -57,23 +72,23 @@ export default function Header({ onMenuToggle }) {
 
                         <img srcSet="/assets/icons/user-default.svg" className={styles['user-photo']} />
 
-                        <h2>Nome do Usuario</h2>
+                        <h2>{cookies.get('user')}</h2>
 
-                        <p>Email do Usuario</p>
+                        <p>{cookies.get('email')}</p>
                     </div>
 
                     <ul className={styles.links}>
 
                         <li className={styles.link}>
-                            <Link href="/admin/products"><a><img src="/assets/icons/products.svg" />Produtos</a></Link>
+                            <Link href="/admin/products"><a title="Produtos"><img src="/assets/icons/products.svg" />Produtos</a></Link>
                         </li>
 
                         <li className={styles.link}>
-                            <Link href="/admin/contacts"><a><img src="/assets/icons/contacts.svg" />Contatos</a></Link>
+                            <Link href="/admin/contacts"><a title="Contatos"><img src="/assets/icons/contacts.svg" />Contatos</a></Link>
                         </li>
 
                         <li className={styles.link}>
-                            <Link href="#"><a><img src="/assets/icons/logout.svg" />Sair</a></Link>
+                            <a onClick={logout} title="Sair" ><img src="/assets/icons/logout.svg" />Sair</a>
                         </li>
 
                     </ul>

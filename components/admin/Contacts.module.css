@@ -1,37 +1,20 @@
 .main {
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 238px);
-    height: calc(100vh - 138px);
+    width: calc(100vw - 100px);
+    height: calc(100vh - 238px);
     overflow: auto;
+    background: white;
 }
 
 .contatosContent{
     display: flex;
     flex-direction: column;
 }
-.headerContatos{
-    display: flex;
-    justify-content: flex-start;
-    
-    text-transform: uppercase;
-    font-weight: bold;
-    border-bottom: 2px solid #ccc;
-}
-.headerContatos li{
-    width: 100%;
-}
-.headerContatos li{
-    flex: 1;
-}
-.headerContatos li:last-child{
-    flex: 1;
-}
-
 .messageList {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
 }
 
 .messageList .ulList {
@@ -100,14 +83,13 @@
 }
 
 @media (min-width: 768px) {
-
-    .messageList {
-        width: 45%;
-        max-width: 340px;
+    .main{
+        justify-content: space-evenly;
     }
-
+    .messageList{
+        max-width: 400px;
+    }
     .messages {
-        width: 62%;
         border-top: none;
         overflow: auto;
     }

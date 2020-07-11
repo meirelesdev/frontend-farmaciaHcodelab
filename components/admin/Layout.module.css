@@ -1,12 +1,12 @@
 .content {
-    background-color: var(--sha-default);
+    background-color: #ddd;
     height: 100vh;
     display: block;
     overflow: auto;
-    color: white;
+    /* color: white; */
 }
 .main {
-    padding-top: 20px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;

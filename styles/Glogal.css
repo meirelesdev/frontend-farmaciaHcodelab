@@ -15,7 +15,16 @@
     outline: none;
     font-family: Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+a{
+    text-decoration: none;
+}
 body, footer, header{
     margin: 0;
     padding: 0;
+    /* background-color: #ccc; */
+}
+form button:hover{
+        background-color: white;
+        color: var(--bor-default2);
+        border: 2px solid var(--bor-default2);
 }

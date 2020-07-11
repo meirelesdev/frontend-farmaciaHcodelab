@@ -27,8 +27,7 @@ export default function Header(props){
             </button>
                 <Sidebar show={sidebarShow} toogleSidebar={toogleSidebar}/>
             <div className={styles.search}>
-                    <input type="search" placeholder="O que você procura"/>
-                    <img srcSet="/assets/icons/lupa.svg" alt="busca" />
+                    
             </div>
             <Nav />
         </header>

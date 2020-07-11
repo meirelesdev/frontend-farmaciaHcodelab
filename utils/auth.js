@@ -9,6 +9,7 @@ export default async function handleAuthSSR(ctx) {
     
     let token = null
     let user = null
+
     if(ctx?.req?.headers?.cookie) {
         token = ctx.req.headers.cookie.replace(/(?:(?:^|.*;\s*)token\s*\=\s*([^;]*).*$)|^.*$/, "$1")
     } else {
@@ -16,14 +17,15 @@ export default async function handleAuthSSR(ctx) {
     }
     try {
         const config = { headers: { Authorization: `Bearer ${token}` } }
-        const resp = await axios.get(serverUrl + '/auths/profile', config)
-        user = resp.data
+
+        const resp = await axios.get(serverUrl + '/admin/users', config)
+        
+        return config
     } catch (err) {
+        
         if (ctx.res) {
             ctx.res.writeHead(302, { Location: '/login' })
             ctx.res.end()
         } 
     }
-    
-    return user
 }
