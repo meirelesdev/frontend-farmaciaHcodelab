@@ -1,6 +1,8 @@
 import styles from './Header.module.css'
 import IconFarmacia from './IconFarmacia'
 import Link from 'next/link'
+import Head from  'next/head'
+import HeadInfo from '../HeadInfo'
 import { useState, useEffect } from 'react'
 import { Cookies } from 'react-cookie'
 import { useRouter } from 'next/router'
@@ -35,6 +37,11 @@ export default function Header({ onMenuToggle }) {
     }, [menuOpened])
 
     return (
+        <>
+        <Head>
+            <HeadInfo/>
+            <title>Painel | Admin </title>
+        </Head>
         <header id={styles.header} className={menuOpened ? styles.open : ''}>
 
             <div className={styles.logo}>
@@ -98,6 +105,7 @@ export default function Header({ onMenuToggle }) {
             </div>
 
         </header>
+        </>
     )
 
 }

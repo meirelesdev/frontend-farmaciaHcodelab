@@ -11,6 +11,7 @@ export default function HeadeInfo(){
             <link rel="manifest" href="/favicon/manifest.json" />
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
             
+            
         </>
     )
 }
