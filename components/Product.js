@@ -8,7 +8,7 @@ export default function Product(props) {
 
     return (
         <div className={styles.product}>
-            <Link href={`/products/${produto.id}`}>
+            <Link href={`/products/${produto.id}`} >
                 <a>
                     <img srcSet={`${serverUrl}/products/image/${produto.id}`} alt={produto.name} />
                 </a>
