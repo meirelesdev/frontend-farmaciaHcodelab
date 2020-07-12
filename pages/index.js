@@ -31,7 +31,7 @@ export default function Index(props) {
                 <main>
                     <div>
                         <h2>Serviços</h2>
-                        <img srcSet="/assets/img/injeservicos.jpg" alt="Servicos"/>
+                        <img srcSet="/assets/img/injeservicos.jpg" width="50px" alt="Servicos"/>
                         <p>Aplicação de injetaveis</p>
                     </div>
                     <div>
