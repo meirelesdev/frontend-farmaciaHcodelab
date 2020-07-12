@@ -9,7 +9,7 @@
     font-weight: bold;
     letter-spacing: 3px;
     font-size: 12pt;
-    color: var(--bgl-default);
+    color: #1a74d9;
 }
 .logo a {
     display: inherit;
