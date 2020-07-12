@@ -30,6 +30,10 @@
     padding: 10px;
     font-size: 12px;
 }
+.infoSite div p{
+    font-size: 12pt;
+    color: #1a74d9;
+}
 @media (min-width: 776px){
     .divsFooter{
         display: flex;
