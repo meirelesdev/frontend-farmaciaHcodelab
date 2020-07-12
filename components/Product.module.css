@@ -40,7 +40,7 @@
     color: green;
 }
 .product .priceParcel{
-    color: #f57b42;
+    color:var(--bgl-default);
     font-weight: bold;
     margin-bottom: 5px;
 }
