@@ -6,8 +6,9 @@
     flex-direction: column;
 }
 .logo p{
-    font-weight: 30px;
     font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 12pt;
     color: var(--bgl-default);
 }
 .logo a {
