@@ -3,17 +3,17 @@ import HeaderTitle from '../../../components/admin/HeaderTitle'
 import React from 'react'
 import handleAuthSSR from '../../../utils/auth'
 import Card from '../../../components/admin/Card'
-import AddProduct from '../../../components/admin/addProduct'
+import AddUser from '../../../components/admin/AddUser'
 
 export default function newProduct({res}) {
     
     return (
         <Layout>
 
-            <HeaderTitle text="Novo Produto" />
+            <HeaderTitle text="Novo Usuario" />
             <Card>
             
-                <AddProduct token={res}/>
+                <AddUser token={res}/>
             </Card>
 
         </Layout>

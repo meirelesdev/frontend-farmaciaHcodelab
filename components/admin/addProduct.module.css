@@ -45,11 +45,10 @@
     margin-right: 10px;
     text-align: end;
     line-height: 50px;
-    /* justify-content: center; */
-    /* align-items: flex-end; */
-
     width: 30%;
-
+}
+.formAdd input{
+    margin-left: 50px;
 }
 .inputGroup input,.inputGroup textarea {
     padding: 10px;

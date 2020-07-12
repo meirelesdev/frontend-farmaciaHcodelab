@@ -35,7 +35,7 @@ export default function editProduct({ produto }) {
         await Axios.put(`${serverUrl}/admin/products/${values.id}`, formulario, config)
         
         alert("Alteração Feita com Sucesso!")
-        Router.push("/admin")
+        Router.push("/admin/products")
     }
     
     return (

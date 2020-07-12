@@ -6,9 +6,24 @@ import { useRouter } from 'next/router'
 export default function Button(props) {
 
     const Router = useRouter()
+    const config = props.config
 
     const handleClick = async e => {
         switch (props.action) {
+            case "edituser":
+                Router.push(`/admin/users/${props.id}`)
+                break
+            case "addUser":
+                Router.push('/admin/users/new')
+                break
+            case "deluser":
+                if (confirm("Tem certeza que deseja excluir?")) {
+                    await axios.delete(`${serverUrl}/admin/users/${props.id}`, config).then(res => {
+                        alert(`Usuario deletado com Sucesso!`)
+                        Router.push(`/admin/users`)
+                    }).catch(err => { alert("Deu ruim") })
+                }
+                break
             case "adicionar":
                 Router.push(`/admin/products/new`)
                 break

@@ -87,7 +87,15 @@ export default function Header({ onMenuToggle }) {
                     <ul className={styles.links}>
 
                         <li className={styles.link}>
-                            <Link href="/admin/products"><a title="Produtos"><img src="/assets/icons/products.svg" />Produtos</a></Link>
+                            <Link href="/admin/products">
+                                <a title="Produtos">
+                                    <img src="/assets/icons/products.svg" />
+                                    Produtos
+                                </a>
+                            </Link>
+                        </li>
+                        <li className={styles.link}>
+                            <Link href="/admin/users"><a title="Usuarios"><img  src="/assets/icons/user-default.svg" />Usuarios</a></Link>
                         </li>
 
                         <li className={styles.link}>

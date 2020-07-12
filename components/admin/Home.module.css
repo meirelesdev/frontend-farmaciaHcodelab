@@ -11,6 +11,7 @@
     grid-template-columns: auto;
     background-color: white;
     border-radius: 15px;
+    margin-top: 20px;
     margin-bottom: 20px;
     grid-gap: 10px;
 }
@@ -78,6 +79,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.userAdmin{
+    display: flex;
+    
+}
+.userAdmin .title{
+    letter-spacing: 2px;
+    font-size: 1.1em;
+    font-style: italic;
+    text-align: left;
+    color: #61605d;
+}
+.userAdmin .dataUser{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#eee;
+    min-width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+}
+ .btnProdutos button{
+    margin-left: 10px;
+    padding: 10px;
+    border: 2px solid green;
+    color: green;
+}
+.btnProdutos button:last-child{
+    border: 2px solid red;
+    color: red;
+}
+.btnProdutos button:hover{
+    background-color: green;
+    color: white;
+}
+.btnProdutos button:last-child:hover{
+    background-color: red;
+    color: white;
+}
+.userAdmin .dataUser p{
+    margin: 2px;
 }
 @media (min-width: 576px) {
     #home {
