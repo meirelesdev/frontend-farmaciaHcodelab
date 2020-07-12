@@ -19,6 +19,7 @@ export default function Index(props) {
             </div>
             <hr />
             <section className={styles.products}>
+                <h2>Produtos em Destaque</h2>
                 {products.length >= 0 ?
                     products.map((product, index) => (
                         <Product key={index} produto={product} />
