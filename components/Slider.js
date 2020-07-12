@@ -4,8 +4,17 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Slider(){
-
-    let sliderArr = [{
+    
+    const [x, setX] = useState(0)
+    
+    let sliderArr = [
+        {
+            img: <ImgComp src="/assets/banner/covid19.jpg" alt="codiv-19"/>,
+            title: "Todos Contra o covid",
+            link:"/contact",
+            textLink:"Se proteja"
+        },
+        {
         img: <ImgComp src="/assets/banner/farmacia.jpg" alt="farmacia Popular"/>,
         title: "Medicamentos Gratis",
         link:"/contact",
@@ -22,18 +31,9 @@ export default function Slider(){
         title: "Para a saude da sua Familia",
         link:"/contact",
         textLink: "Aproveite"
-    },
-    {
-        img: <ImgComp src="/assets/banner/covid19.jpg" alt="codiv-19"/>,
-        title: "Todos Contra o covid",
-        link:"/contact",
-        textLink:"Se proteja"
     }
     ]
 
-    const [x, setX] = useState(0)
-
-    
     const goLeft = () => {
         x === 0 ? setX(-100*(sliderArr.length - 1)): setX(x + 100)
     }
@@ -59,10 +59,10 @@ export default function Slider(){
                     )
                 })
             }
-            <button onClick={goRight} className={styles.direita}>
+            <button onClick={goLeft} className={styles.direita}>
                 <img srcSet="/assets/icons/seta.svg" alt="Para Direita" />
             </button>
-            <button onClick={goLeft}  className={styles.esquerda}>
+            <button onClick={goRight}  className={styles.esquerda}>
                 <img srcSet="/assets/icons/seta.svg" alt="Para Esquerda" />
             </button>
         </div>
