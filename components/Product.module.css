@@ -33,7 +33,7 @@
 }
 .product .oldPrice{
     text-decoration: line-through;
-    color: #a1a1a1;
+    /* color: #a1a1a1; */
 }
 .product p{
     font-weight: bold;
