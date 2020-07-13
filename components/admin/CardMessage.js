@@ -31,7 +31,7 @@ export default function CardMessage(props){
                 <p>{props.received}</p>
             </div>
             <div className={styles.column}>
-                {props.received === props.updated? null :
+                {props.received == props.updated ? null :
                 <> 
                         <p>Respondida em: </p>
                         <p>{props.updated}</p>
